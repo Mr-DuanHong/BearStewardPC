@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <style>
+        /* body{
+            background: url(./img/熊管家-关于我们.png) no-repeat;
+        } 
+        .wrap{
+            opacity: 0.6;
+        } */
+        .container{
+            width: 1200px;
+            margin:0 auto;
+            font-family: 'MicrosoftYaHei';
+            position: relative;
+        }
+        .container img{
+            width: 1200px;
+        }
+        .container .containerTitle{
+            font-size: 32px;
+            color: #333333;
+            font-weight: normal;
+            text-align: center;
+        }
+        .container .containerEntitle{
+            font-size: 12px;
+            color: #666666;
+            line-height: 24px;
+            text-align: center;
+            height: 24px;
+            width: 180px;
+            border: 1px solid #b6b6b6;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        /* 公司简介 */
+        #containerIntroduction{
+            background-color: #f3f3f3;
+        }
+        #contaerinIntro{
+            padding-top: 49px;
+            background-color: #f3f3f3;
+        }
+        #containerIntroduction-logo{
+            width: 27px;
+            height: 27px;
+            background: url(./img/Sprites.png) no-repeat -52px -156px;
+            margin: 0 auto 2px;
+        }
+        #containerIntroduction-Entitle{
+            margin-top:1px;
+            margin-bottom: 22px;
+        }
+        #containerIntroduction-img{
+            position: relative;
+            display: block;
+        }
+        #containerIntroduction-img div{
+            position: absolute;
+            left:0px;
+            right:876px;
+            top:0px;
+            bottom:0px;
+            background-color: rgba(0, 0, 0, .5);
+            color:#FFFFFF;
+            padding:0 31px 0 31px;
+        }
+        #containerIntroduction-img div p span{
+            display: inline-block;
+            width: 8px;
+        }
+        #containerIntroduction-img div h3{
+            font-size: 27px;
+            line-height: 27px;
+            margin:39px 0 7px 0;
+        }
+        #containerIntroduction-img div h6{
+            font-size: 14px;
+            line-height: 14px;
+            font-family: 'MicrosoftYaHei';
+            letter-spacing: .4px;
+        }
+        #containerIntroduction-img div hr{
+            color:#615F5D;
+            margin:17px 0 14px 0;
+            opacity: 0.6;
+        }
+        #containerIntroduction-img div p{
+            font-size: 14px;
+            line-height: 30px;
+            letter-spacing: -0.3px;
+            /* 溢出省略 */
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 10;
+            overflow: hidden;
+        }
+        #containerIntroduction-img div:hover h3,#containerIntroduction-img div:hover p,#containerIntroduction-img div:hover h6 {
+            color: #0CAA5F;
+            transition: .1s;
+        }
+        /* 团队展示 */
+        #containerTeam{
+            background-color: #FFFFFF;
+            padding-top: 51px;
+            padding-bottom:43px;
+        }
+        #containerTeam-logo{
+            width: 47px;
+            height: 26px;
+            background: url(./img/Sprites.png) no-repeat -52px -130px;
+            margin:0 auto 13px;
+        }
+        #containerTeam-title{
+            margin-top:-8px;
+            /* margin-bottom:-8px; */
+        }
+        #containerTeam-Entitle{
+            margin-top:1px;
+            margin-bottom: 17px;
+        }
+        #containerTeam-img{
+            position: relative;
+            display: block;
+        }
+        #containerTeam-img div{
+            position: absolute;
+            left:0px;
+            right:0px;
+            top:383px;
+            bottom:0px;
+            background-color: rgba(0, 0, 0, .5);
+            color:#FFFFFF;
+        }
+
+        #containerTeam-img div h3{
+            font-size: 25px;
+            line-height: 25px;
+            width: 150px;
+            margin:20px 0 7px 524px;
+            /* 健壮性处理 */
+            white-space: nowrap;
+        }
+        #containerTeam-img div p{
+            font-size: 14px;
+            line-height: 14px;
+            width: 123px;
+            margin-left: 536px;
+            /* 健壮性处理，有宽，防止显示不下，强制不换行 */
+            white-space: nowrap;
+        }
+        #containerTeam-img div:hover h3,#containerTeam-img div:hover p{
+            color: #0CAA5F;
+            transition: .1s;
+        }
+        /* 轮播图按钮 */
+        .bannerBtn{
+            width: 42px;height: 42px;
+            background: url(./img/Sprites.png);
+            position: absolute;
+            cursor: pointer;
+            margin-top: -42px;
+            opacity: 0.7;
+            transition: .2s;
+        }
+        .bannerBtn:hover{
+            opacity: 1;
+        }
+        #bannerBtn1{
+            background-position: -52px -184px;
+            top:333px;
+            left:-80px;
+        }
+        #bannerBtn2{
+            background-position: -52px -227px;
+            top:333px;
+            right:-80px;
+        }
+        /* Aboutus通栏宽度修改 */
+        /* #navContainer{
+            width: 1360px;
+        }
+        .container{
+            width: 1360px;
+        }
+        .footercontainer{
+            width: 1360px;
+        } */
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 导航 -->
+        <div class="nav clear">
+            <div class="navTitle">
+                <!-- 中菜单 -->
+                <div class="navMenu">
+                    <ul>
+                        <li class="active"><a href="./Aboutus.html">了解我们</a></li>
+                        <li><a href="./Caseshare.html">案例分享</a></li>
+                        <li><a href="">精装服务</a></li>
+                        <li><a href="">优质产品</a></li>
+                        <li><a href="./News.html">公司动态</a></li>
+                        <li><a href="./Contact.html">找我们聊聊</a></li>
+                    </ul>
+                </div>
+                <!-- 左logo -->
+                <div class="navLogo">
+                    <a href="./index.html" id="navlogoa"><img src="./img/logo.png" alt="loadfailed"></a>
+                </div>
+                <!-- 右图标 -->
+                <ul class="navIcon">
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li class="wechat"><a href=""></a><div class="QRCode"><img src="./img/QRCODE.png" alt="loadfailed"></div></li>
+                </ul>
+            </div>
+            <img src="./img/aboutus-1.png" alt="loadfailed" class="navImg">
+            <div id="navContainer">
+                <div id="navAboutus">
+                    <h3>ABOUT US</h3>
+                    <h1>关于我们</h1>
+                </div>
+            </div>
+        </div>
+        <!-- 中部内容 -->
+        <div id="containerIntroduction" class="wrap">
+            <!-- 公司简介 -->
+            <div id="contaerinIntro" class="container">
+                <div id="containerIntroduction-logo"></div>
+                <h2 id="containerIntroduction-title" class="containerTitle">公司简介</h2>
+                <div id="containerIntroduction-Entitle" class="containerEntitle">ABOUT</div>
+                <div id="containerIntroduction-img">
+                    <img src="./img/Aboutus-2.png" alt="loadfailed">
+                    <div>
+                        <h3>熊管家家居简介</h3>
+                        <h6>Xiong Guanjia Introduction</h6>
+                        <hr>
+                        <p>熊管家家居 ( 成都 ) 有限公司 , 是一家设计驱动的全案美学整装公司。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们致力于为客户提供一站式整装 + 软装定制服务。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;熊管家以创新者的姿态 , 为改变家装行业糟糕的体验而来。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;熊管家主要为城市中产家庭 , 提供全空间<span>、</span>全功能的定制精装<span>、</span>软装<span>、</span>家具一体化家装解决方案。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="containerTeam" class="wrap">
+            <!-- 团队展示 -->
+            <div class="container">
+                <div id="containerTeam-logo"></div>
+                <h2 id="containerTeam-title" class="containerTitle">团队展示</h2>
+                <div id="containerTeam-Entitle" class="containerEntitle">TEAM SHOW</div>
+                <div id="containerTeam-img">
+                    <img src="./img/Aboutus-3.png" alt="loadfailed">
+                    <div>
+                        <h3>金牌设计团队</h3>
+                        <p>Gold Design Team</p>
+                    </div>
+                </div>
+                <!-- 轮播图按钮 -->
+                <div id="bannerBtn1" class="bannerBtn"></div>
+                <div id="bannerBtn2" class="bannerBtn"></div>
+            </div>
+        </div>
+        <!-- 页脚 -->
+        <div class="footer">
+            <div class="footercontainer">
+                <a href="./index.html" id="footerlogoa"><img class="footerlogo" src="./img/footerlogo.png" alt="loadfailed"></a>
+                <div class="footerTelephone">
+                    <div class="footerTelephonelogo"></div>
+                    <p><span> 028-82708866 / 13558833169</span></p>
+                </div>
+                <div class="list clear">
+                    <div class="contact">
+                        <h5>联系方式</h5>
+                        <p><span></span>成都熊管家装饰装修有限公司</p>
+                        <p><span></span>地址 : 成都市温江区珠江广场写字楼15楼</p>
+                        <p><span></span>联系电话 : 028-82708866 &#40;座机&#41; &nbsp;/13558833169</p>
+                        <p><span></span>E-mail : admian@admin.com</p>
+                    </div>
+                    <div class="fastguid">
+                        <h5>快速导航</h5>
+                        <a href="./Aboutus.html">了解我们</a> &#47;
+                        <a href="./Caseshare.html">案例分享</a> &#47;
+                        <a href="">精装服务</a> &#47;
+                        <a href="">优质产品</a> / 
+                        <a href="./News.html">公司动态</a> /
+                        <a href="./Contact.html">联系我们</a> 
+                        <img src="./img/fastguidfont.png" alt="loadfailed">
+                    </div>
+                    <div class="access">
+                        <h5>快捷入口</h5>
+                        <ul class="navIcon clear">
+                            <li class="wechat"><a href=""></a><div class="QRCode"><img src="./img/QRCODE.png" alt="loadfailed"></div></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                        </ul>
+                        <p>互联网家装引领者</p>
+                    </div>
+                </div>
+                <div class="footerCopyright">Copyright &copy;2015-2019&nbsp;&nbsp;成都熊管家装饰装修有限公司 版权所有</div>
+            </div>
+        </div>
+        <div id="copyrightLine" ></div>
+    </div>
+</body>
+</html>

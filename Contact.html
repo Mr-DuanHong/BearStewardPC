@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <style>
+        /* body{
+            background: url(./img/熊管家-联系我们.png) no-repeat;
+        } 
+        .wrap{
+            opacity: .6;
+        } */
+        .nav #navAboutus{
+            top:-199px;
+            left:0px;
+        }
+        .container{
+            width: 1200px;
+        }
+        /* 地图 */
+        #mapWrap{
+            background: url(./img/contact-mapback.png) no-repeat;
+            position: relative;
+        }
+        #mapWrapMask{
+            width: 100%;
+            z-index: 1;
+            height: 548px;
+            background-color: rgba(0, 0, 0, .5);
+        }
+        #mapContainer{
+            height: 548px;
+            z-index: 10;
+            margin:-548px auto 0;
+            background: url(./img/contact-map.png);
+            z-index: 10;
+        }
+        /* 联系 */
+        #formWrap{
+            background-color: #FAFAFA;
+        }
+        #formContainer{
+            background-color: #FFFFFF;
+            margin:0 auto;
+            box-sizing: border-box;
+            padding:50px 0 49px 32px;
+        }
+        #formContainer #formLeft{
+            float: left;
+            width: 568px;
+            box-sizing: border-box;
+            border-right: 1px solid #E4E4E4;
+            padding-left: 14px;
+        }
+        #formContainer #formLeft h3{
+            font-size: 18px;
+            margin: 2px 0 23px 0px;
+            font-weight: bold;
+        }
+        #formContainer #formLeft p{
+            font-size: 16px;
+            height: 35px;
+            font-weight: bold;
+        }
+        #formContainer #formLeft p:nth-child(2)::after{
+            content: '成都市温江区珠江广场写字楼15楼';
+            font-weight: normal;
+        }
+        #formContainer #formLeft p:nth-child(3)::after{
+            content: '028-82708866';
+            font-weight: normal;
+        }
+        #formContainer #formLeft p:nth-child(4)::after{
+            content: '13558833169';
+            font-weight: normal;
+        }
+        #formContainer #formLeft p:nth-child(5)::after{
+            content: '123456789';
+            font-weight: normal;
+        }
+        #formContainer #formLeft section{
+            font-size: 14px;
+            line-height: 35px;
+            color: #999999;
+            margin:0px 0 48px 0;
+        }
+        #formContainer #formLeft img{
+            width: 135px;
+            height: 135px;
+            margin-left: -14px;
+            float: left;
+        }
+        #formContainer #formLeft div{
+            float: right;
+            width: 281px;
+            text-align: center;
+            margin:28px 143px 70px 0;
+        }
+        #formContainer #formLeft div h2{
+            font-size: 24px;
+            line-height: 35px;
+            color: #333333;
+            margin:0 auto;
+        }
+        #formContainer #formLeft div section{
+            font-size: 18px;
+            line-height: 35px;
+            color: #333333;
+            margin:6px auto;
+        }
+        #formContainer #formLeft div a{
+            color: #14916a;
+            font-size: 18px;
+        }
+        /* 右 */
+        #formContainer #formRight{
+            float: left;
+            width: 599px;
+        }
+        #formContainer #formRight h2{
+            font-size: 24px;
+            line-height: 24px;
+            margin:8px 0 29px 156px;
+            color: #333333;
+        }
+        #formRight .contactInput{
+            font-size: 16px;
+            margin:18px 0 19px 96px;
+        }
+        #formRight .contactInput span{
+            color: red;
+        }
+        #formRight .contactInput b{
+            color:#413933;
+        }
+        #formRight .contactInput input{
+            height: 40px;
+            width: 270px;
+            box-sizing: border-box;
+            border: 1px solid #BCBBB7;
+            margin-left:30px;
+            padding:0 6px 0 12px;
+            color: #424249;
+        }
+        #formRight .contactInput input::placeholder{
+            color: #BCBCBC;
+        }
+        /* 为什么下一行去掉,后边的#formright不生效？ */
+        /* 可能是去掉以后，权重只有101，被其他更高的覆盖了 */
+        #formRight #contactArea input ,#formRight #contactTime input{
+            margin-left:28px;
+        }
+        #formRight button{
+            width: 272px;
+            height: 60px;
+            border: none;
+            border-radius: 30px;
+            background-color: #333333;
+            font-size: 22px;
+            color: #FFFFFF;
+            margin: 36px 0 0 162px;
+            cursor: pointer;
+        }
+        #formRight button:hover{
+            color: #0CAA5F;
+            transition: .2s;
+        }
+        #formRight #contactArea, #contactTime{
+            position: relative;
+        }
+        #formRight .contactTri{
+            width: 0;
+            height: 0;
+            border-top:9px solid #323232;
+            border-left:5px solid transparent;
+            border-right:5px solid transparent;
+            position: absolute;
+            top:16px;
+            right:137px;
+            /* 穿透点击 */
+            pointer-events:none;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 导航 -->
+        <div class="nav clear">
+            <div class="navTitle">
+                <!-- 中菜单 -->
+                <div class="navMenu">
+                    <ul>
+                        <li><a href="./Aboutus.html">了解我们</a></li>
+                        <li><a href="./Caseshare.html">案例分享</a></li>
+                        <li><a href="">精装服务</a></li>
+                        <li><a href="">优质产品</a></li>
+                        <li><a href="./News.html">公司动态</a></li>
+                        <li class="active"><a href="./Contact.html">找我们聊聊</a></li>
+                    </ul>
+                </div>
+                <!-- 左logo -->
+                <div class="navLogo">
+                    <a href="./index.html" id="navlogoa"><img src="./img/logo.png" alt="loadfailed"></a>
+                </div>
+                <!-- 右图标 -->
+                <ul class="navIcon">
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li class="wechat"><a href=""></a><div class="QRCode"><img src="./img/QRCODE.png" alt="loadfailed"></div></li>
+                </ul>
+            </div>
+            <img src="./img/NEWS-1.png" alt="loadfailed" class="navImg">
+            <div id="navContainer">
+                <div id="navAboutus">
+                    <h3>CONTACT US</h3>
+                    <h1>联系我们</h1>
+                </div>
+            </div>
+        </div>
+        <!-- 中部内容 -->
+        <div id="formWrap" class="wrap">
+            <div id="formContainer" class="container clear">
+                <div id="formLeft" class="clear">
+                    <h3>联系方式</h3>
+                    <p>地址 ：</p>
+                    <p>电话 ：</p>
+                    <p>手机 ：</p>
+                    <p>Q Q ：</p>
+                    <section>09:00 AM ~ 06:00 PM , 周末照常上班</section>
+                    <img src="./img/contact-1.png" alt="loadfailed">
+                    <div>
+                        <h2>— 扫微信二维码 —</h2>
+                        <section>添加<a href="./index.html">熊管家</a>微信征询</section>
+                    </div>
+                </div>
+                <form action="">
+                    <div id="formRight">
+                        <h2>— 请客户顾问联系我 —</h2>
+                        <div id="contactUsername" class="contactInput"><span>*&nbsp;</span><b>您的姓名</b><input type="text" placeholder="请填写您的姓名" name="username"></div>
+                        <div id="contactTelephone" class="contactInput"><span>*&nbsp;</span><b>手机号码</b><input type="text" placeholder="请填写您的手机号码" name="usertelephone"></div>
+                        <div id="contactArea" class="contactInput">
+                            <span>&nbsp;&nbsp;</span><b>建筑面积</b>
+                            <input type="text" list="text_Area" name="Area" value="选填">
+                            <datalist id="text_Area">
+                                <option label="选填" value="面积"></option>
+                                <option label="100~200平方米" value="面积"></option>
+                            </datalist>
+                            <div id="contactAreaTri" class="contactTri"></div>
+                        </div>
+                        <div id="contactTime" class="contactInput">
+                            <span>&nbsp;&nbsp;</span><b>致电时间</b>
+                            <input type="text" list="text_Time" name="Area" value="立即联系">
+                            <datalist id="text_Time">
+                                <option label="立即联系" value="联系时间"></option>
+                                <option label="明天上午联系" value="联系时间"></option>
+                            </datalist>
+                            <div id="contactTimeTri" class="contactTri"></div>
+                        </div>
+                        <button id="Apointment">立即预约</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="mapWrap" class="wrap">
+            <div id="mapWrapMask"></div>
+            <div id="mapContainer" class="container"></div>
+        </div>
+        <!-- 页脚 -->
+        <div class="footer">
+            <div class="footercontainer">
+                <a href="./index.html" id="footerlogoa"><img class="footerlogo" src="./img/footerlogo.png" alt="loadfailed"></a>
+                <div class="footerTelephone">
+                    <div class="footerTelephonelogo"></div>
+                    <p><span> 028-82708866 / 13558833169</span></p>
+                </div>
+            <div class="list clear">
+                <div class="contact">
+                    <h5>联系方式</h5>
+                    <p><span></span>成都熊管家装饰装修有限公司</p>
+                    <p><span></span>地址 : 成都市温江区珠江广场写字楼15楼</p>
+                    <p><span></span>联系电话 : 028-82708866 &#40;座机&#41; &nbsp;/13558833169</p>
+                    <p><span></span>E-mail : admian@admin.com</p>
+                </div>
+                <div class="fastguid">
+                    <h5>快速导航</h5>
+                    <a href="./Aboutus.html">了解我们</a> &#47;
+                    <a href="./Caseshare.html">案例分享</a> &#47;
+                    <a href="">精装服务</a> &#47;
+                    <a href="">优质产品</a> / 
+                    <a href="./News.html">公司动态</a> /
+                    <a href="./Contact.html">联系我们</a> 
+                    <img src="./img/fastguidfont.png" alt="loadfailed">
+                </div>
+                <div class="access">
+                    <h5>快捷入口</h5>
+                    <ul class="navIcon clear">
+                        <li class="wechat"><a href=""></a><div class="QRCode"><img src="./img/QRCODE.png" alt="loadfailed"></div></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                    </ul>
+                    <p>互联网家装引领者</p>
+                </div>
+            </div>
+                <div class="footerCopyright">Copyright &copy;2015-2019&nbsp;&nbsp;成都熊管家装饰装修有限公司 版权所有</div>
+            </div>
+        </div>
+        <div id="copyrightLine" ></div>
+    </div>
+</body>
+</html>

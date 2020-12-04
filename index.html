@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <style>
+        /* body{
+            background: url(./img/熊管家-首页.png) no-repeat
+        } */
+        .wrap{
+            /* opacity: 0.6; */
+            background: url(./img/index-back.png);
+        }
+        /* 导航栏 */
+        #indexNav{
+            width: 100%;
+            height: 1080px;
+            background: url(./img/index-top.png) no-repeat;
+            position: relative;
+        }
+        #indexNav #indexNavTitle{
+            width: 300px;
+            box-sizing: border-box;
+            height: 1080px;
+            background-color: rgba(0, 0, 0, .5);
+            padding-top: 134px;
+        }
+        /* logo */
+        #indexNav #indexNavTitle #indexNavlogo{
+            width: 300px;
+            height: 100px;
+            box-sizing: border-box;
+            border-bottom: 3px solid #1EA081;
+            background-color: #FFFFFF;
+            /* 定位点 */
+            position: relative;
+            margin-bottom: 59px;
+        }
+        #indexNav #indexNavTitle #indexNavlogo::before{
+            /* 三角 */
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-top: 13px solid #14916a;
+            border-left:13px solid transparent;
+            position: absolute;
+            right: 0;
+        }
+        #indexNavTitle #indexNavlogo a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 24px 0 21px 0;
+        }
+        #indexNavTitle #indexNavlogo img{
+            margin-left:54px;
+        }
+        #indexNavTitle #indexNavlist li{
+            width: 100%;
+        }
+        #indexNavTitle #indexNavlist li a{
+            width: 136px;
+            display: block;
+            font-size: 18px;
+            line-height: 40px;
+            color: #ffffff;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            text-align: center;
+            margin-left: 79px;
+            margin-top:23.5px;
+        }#indexNavTitle #indexNavlist li:last-of-type a{margin-left: 87px;}
+        #indexNavTitle #indexNavlist li:nth-of-type(2):hover a,
+        #indexNavTitle #indexNavlist li:nth-of-type(3):hover a,
+        #indexNavTitle #indexNavlist li:nth-of-type(4):hover a,
+        #indexNavTitle #indexNavlist li:nth-of-type(5):hover a,
+        #indexNavTitle #indexNavlist li:nth-of-type(6):hover a{
+            background-color: #FFFFFF;
+            color: #14916a;
+        }
+        #indexNavTitle #indexNavlist .active a{
+            background-color: #FFFFFF;
+            color: #14916a;
+
+        }
+        #indexNavTitle #indexNavtel{
+            width: 234px;
+            box-sizing: border-box;
+            border: 1px solid rgba(192, 192, 192, 0.3);
+            margin:77px auto 4px;
+            padding-bottom: 5px;
+        }
+        #indexNavTitle #indexNavtel div{
+            width: 27px;
+            height: 27px;
+            background: url(./img/Sprites.png) no-repeat 0 -286px;
+            float: left;
+            margin:24px 0 0 17px;
+        }
+        #indexNavTitle #indexNavtel p{
+            margin:10px 0px 0 65px;
+            font-family: "Arial-BoldMT";
+            letter-spacing: -.4px;
+            font-size: 22px;
+            line-height: 28px;
+            color: #ececec;
+            transition: .1s;
+        }
+        #indexNavTitle #indexNavtel:hover{
+            background-color: rgba(192, 192, 192, 0.1);
+        }
+        #indexNavTitle #indexNavtel:hover p{
+            color:#0CAA5F;
+        }
+        #indexNavTitle #indexNavtel:hover div{
+            background-position: -26px -286px;
+        }
+         /* 一行图标 */
+        #indexNav .navIcon{
+            width: 378px;
+            margin-left: 17px;
+            margin-top:4px;
+        }
+        #indexNav .navIcon li{
+            float: left;
+            margin-top:14px;
+            margin-bottom: 14px;
+        }
+        #indexNav .navIcon li a{
+            display: block;
+            width: 26px;
+            height: 26px;
+            margin-left: 15px;
+            background: url(./img/Sprites.png) no-repeat center;
+        }
+            /* 右浮动，所以是从右向左 */
+        #indexNav .navIcon li:nth-of-type(1) a{background-position: 0px 0;}
+        #indexNav .navIcon li:nth-of-type(2) a{background-position: 0px -26px;}
+        #indexNav .navIcon li:nth-of-type(3) a{background-position: 0px -52px;}
+        #indexNav .navIcon li:nth-of-type(4) a{background-position: 0px -79px;}
+        #indexNav .navIcon li:nth-of-type(5) a{background-position: 0px -104px;}
+        #indexNav .navIcon li:nth-of-type(6) a{margin-left:22px;background-position: 0 -130px;}
+             /* 鼠标悬停效果 */
+        #indexNav .navIcon li:nth-of-type(1) a:hover{background-position: -26px 0;}
+        #indexNav .navIcon li:nth-of-type(2) a:hover{background-position: -26px -26px;}
+        #indexNav .navIcon li:nth-of-type(3) a:hover{background-position: -26px -52px;}
+        #indexNav .navIcon li:nth-of-type(4) a:hover{background-position: -26px -78px;}
+        #indexNav .navIcon li:nth-of-type(5) a:hover{background-position: -26px -104px;}
+        #indexNav .navIcon li:nth-of-type(6) a:hover{margin-left:22px;background-position: -26px -130px;}
+                /* QRCODE */
+        #indexNav .wechat{
+            position: relative;
+        }
+        #indexNav .wechat:hover .QRCode{
+            display: block;
+        }
+        #indexNav .QRCode{
+            width: 155px;
+            height: 155px;
+            background-color: white;
+            border-radius: 15px;
+            /* 定位 */
+            position: absolute;
+            top:-64px;
+            left:58px;
+            /* 默认隐藏 */
+            display: none;
+        }
+        #indexNav .QRCode::before{
+            /* 三角号 */
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-bottom:10px solid transparent;
+            border-top: 10px solid transparent;
+            border-right: 10px solid white;
+            /* 定位 */
+            position: absolute;
+            left: 0%;
+            top:65px;
+            margin-left:-10px;
+        }
+        #indexNav .QRCode img{
+            margin: 9px 9px;
+        }
+        /* 轮播图按钮 */
+        #indexNav #indexbannerBtn{
+            position: absolute;
+            bottom:73px;
+            left:903px;
+        }
+        #indexNav #indexbannerBtn li{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ffffff;
+
+            float: left;
+            margin-left: 15px;
+        }
+        #indexNav #indexbannerBtn li a{
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        #indexNav #indexbannerBtn .indexbannerBtnAcitve{
+            background-color: #14916a;
+        }
+        /* 内容 */
+        #indexcontainer{
+            width: 1200px;
+            margin:0 auto;
+            padding:107px 0 0 0;
+            background: url(./img/index-back.png);
+
+        }
+        .indexcontainerTitle div{
+            color: #333333;
+            width: 7px;
+            height: 47px;
+            background-image: linear-gradient(0deg,#14916a,#16da9d);
+            float: left;
+            margin-right: 11px;
+        }
+        .indexcontainerTitle h2{
+            font-size: 32px;
+            line-height: 32px;
+            color: #333333;
+            font-family: "FZDBSJW--GB1-0","STSong";
+            font-weight: bold;
+            margin-bottom: 1px;
+        }
+        .indexcontainerTitle span{
+            font-size: 14px;
+            line-height: 14px;
+            opacity: 0.5;
+            display: block;
+            font-family: "MicrosoftYaHei";
+        }
+        #indexwelcome img{
+            width: 673px;
+            height: 462px;
+            float: right;
+            box-sizing: border-box;
+            border-bottom:4px solid #00B586;
+            box-shadow: 0px 0px 20px 0px gray;
+        }
+        #indexwelcome p{
+            font-size: 16px;
+            line-height: 35px;
+            color: #333333;
+            margin-top: 50px;
+            width: 485px;
+            letter-spacing: -0.5px;
+        }
+        #indexwelcome button{
+            width: 164px;
+            background-color: #ffffff;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 44px;
+            text-indent: -16px;
+            color: #14916a;
+            box-sizing: border-box;
+            cursor: pointer;
+            border: none;
+            border-radius: 22px;
+            margin:104px 0 0 315px;
+            /* 阴影 */
+            box-shadow: 0 5px 10px 0px rgba(11,2,5,0.31),0 -5px 10px -5px inset rgba(11,2,5,0.31);
+            /* 定位 */
+            position: relative;
+        }
+        #indexwelcome button:hover{
+            box-shadow: 0 8px 12px 0px rgba(11,2,5,0.31),0 -5px 8px -5px inset rgba(11,2,5,0.31);
+        }
+        #indexwelcome button::after{
+            content: '';
+            width: 0px;
+            height: 0px;
+            display: block;
+            border-left: 5px solid #14916a;
+            border-top:5px solid transparent;
+            border-bottom:5px solid transparent;
+            position: absolute;
+            top:17px;
+            right: 27px;
+        }
+        /* 装修管家服务 */
+        #indexservive{
+            margin-top:107px;
+        }
+        #indexservive ul{
+            margin:44px -4px 0px -4px;
+            padding-bottom: 74px;
+        }
+        #indexservive ul li{
+            float: left;
+        }
+        #indexservive li a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            margin:4px;
+            position: relative;
+        }
+        #indexservive li img{
+            width: 294px;
+            height: 202px;
+        }
+            /* 鼠标悬停效果 */
+        #indexservive li:hover img{
+            box-shadow: 0 5px 10px 0 rgba(11,2,5,.36);
+        }
+        #indexservive li:hover div{
+            top:140px;
+        }
+        #indexservive li:hover h3,#indexservive li:hover p{
+            display: block;
+        }
+        #indexservive li div{
+            width: 294px;
+            color: #ffffff;
+            padding-top:0;
+            background-color: rgba(20,145,106,.85);
+            position: absolute;
+            bottom:0;
+            top:202px;
+            transition: .3s;
+        }
+        #indexservive li div h3{
+            font-size: 20px;
+            line-height: 20px;
+            margin:14px 0 7px 12px;
+            display: none;
+        }
+        #indexservive li div p{
+            font-size: 12px;
+            line-height: 12px;
+            margin:0 0 0 13px;
+            display: none;
+        }
+        /* JS的CSS替代 */
+        #indexbannerBtn li:nth-of-type(2):hover a{background-color: #14916a; border-radius: 50%;}
+        #indexbannerBtn li:nth-of-type(3):hover a{background-color: #14916a; border-radius: 50%;}
+        #indexbannerBtn li:nth-of-type(4):hover a{background-color: #14916a; border-radius: 50%;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 导航 -->
+        <div id="indexNav">
+            <div id="indexNavTitle">
+                <div id="indexNavlogo"><a href="./index.html"><img src="./img/logo.png" alt="loadfailed"></a></div>
+                <ul id="indexNavlist">
+                    <li class="active"><a href="./Aboutus.html">了解我们</a></li>
+                    <li><a href="./Caseshare.html">案例分享</a></li>
+                    <li><a href="">精装服务</a></li>
+                    <li><a href="">优质产品</a></li>
+                    <li><a href="./News.html">公司动态</a></li>
+                    <li><a href="./Contact.html">找我们聊聊</a></li>
+                </ul>
+                <div id="indexNavtel" class="clear">
+                    <div></div>
+                    <p>028-82708866<br>13558833169</p>
+                </div>
+                <ul class="navIcon clear">
+                    <li class="wechat"><a href=""></a><div class="QRCode"><img src="./img/QRCODE.png" alt="loadfailed"></div></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                </ul>
+            </div>
+            <ul id="indexbannerBtn" class="clear">
+                <li class="indexbannerBtnAcitve"><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </div>
+        <!-- 内容 -->
+        <div id="indexcontainer">
+            <div id="indexwelcome" class="clear">
+                <img src="./img/index-1.png" alt="欢迎来到熊管家">
+                <div id="indexwelcomeTitle" class="indexcontainerTitle">
+                    <div></div>
+                    <h2>欢迎来到熊管家</h2>
+                    <span>Welcome to Bear House</span>
+                </div>
+                <p>熊管家家居（成都）有限公司 , 是一家设计驱动的全案美学整装公司。<br>
+                    我们致力于为客户提供一站式整装+软装定制服务。<br>
+                    熊管家以创新者的姿态 , 为改变家装行业糟糕的体验而来。<br>
+                    熊管家主要为城市中产家庭 , 提供全空间、全功能的定制精装、软装、家具一体化家装解决方案。</p>
+                <button>联系我们</button>
+            </div>
+            <div id="indexservive">
+                <div id="indexserviveTitle" class="indexcontainerTitle">
+                    <div></div>
+                    <h2>装修管家服务</h2>
+                    <span>Decoration Housekeeping Service</span>
+                </div>
+                <ul class="clear">
+                    <li>
+                        <a href="">
+                            <img src="./img/index-2.png" alt="loadfailed">
+                            <div>
+                                <h3>量房</h3>
+                                <p>量房技巧，量房的正确顺序</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/index-3.png" alt="loadfailed">
+                            <div>
+                                <h3>量房</h3>
+                                <p>量房技巧，量房的正确顺序</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/index-4.png" alt="loadfailed">
+                            <div>
+                                <h3>量房</h3>
+                                <p>量房技巧，量房的正确顺序</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/index-5.png" alt="loadfailed">
+                            <div>
+                                <h3>量房</h3>
+                                <p>量房技巧，量房的正确顺序</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 页脚 -->
+        <div class="footer">
+            <div class="footercontainer">
+                <a href="./index.html" id="footerlogoa"><img class="footerlogo" src="./img/footerlogo.png" alt="loadfailed"></a>
+                <div class="footerTelephone">
+                    <div class="footerTelephonelogo"></div>
+                    <p><span> 028-82708866 / 13558833169</span></p>
+                </div>
+            <div class="list clear">
+                <div class="contact">
+                    <h5>联系方式</h5>
+                    <p><span></span>成都熊管家装饰装修有限公司</p>
+                    <p><span></span>地址 : 成都市温江区珠江广场写字楼15楼</p>
+                    <p><span></span>联系电话 : 028-82708866 &#40;座机&#41; &nbsp;/13558833169</p>
+                    <p><span></span>E-mail : admian@admin.com</p>
+                </div>
+                <div class="fastguid">
+                    <h5>快速导航</h5>
+                    <a href="./Aboutus.html">了解我们</a> &#47;
+                    <a href="./Caseshare.html">案例分享</a> &#47;
+                    <a href="">精装服务</a> &#47;
+                    <a href="">优质产品</a> / 
+                    <a href="./News.html">公司动态</a> /
+                    <a href="./Contact.html">联系我们</a> 
+                    <img src="./img/fastguidfont.png" alt="loadfailed">
+                </div>
+                <div class="access">
+                    <h5>快捷入口</h5>
+                    <ul class="navIcon clear">
+                        <li class="wechat"><a href=""></a><div class="QRCode"><img src="./img/QRCODE.png" alt="loadfailed"></div></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                    </ul>
+                    <p>互联网家装引领者</p>
+                </div>
+            </div>
+                <div class="footerCopyright">Copyright &copy;2015-2019&nbsp;&nbsp;成都熊管家装饰装修有限公司 版权所有</div>
+            </div>
+        </div>
+        <div id="copyrightLine" ></div>
+    </div>
+</body>
+</html>

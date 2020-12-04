@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例分享</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <style>
+        /* body{
+            background: url(./img/熊管家-案例分享.png) no-repeat;
+        }
+        .wrap{
+            opacity: 0.6;
+        } */
+        .nav #navAboutus{
+            top:-217px;
+            left:0px;
+        }
+        .nav #navAboutus h3{
+            top:35px;
+            right:27px;
+        }
+        .nav #navAboutus h1{
+            bottom:30px;
+        }
+        /* 中部 */
+        #caseWrap{
+            overflow: hidden;
+        }
+        #caseContainer{
+            width: 1200px;
+            margin:0 auto;
+            padding:27px 0 36px 0;
+        }
+        #caseContainer ul{
+            margin:0 -10px 0 -10px;
+        }
+        #caseContainer  ul li{
+            float: left;
+            position: relative;
+        }
+        #caseContainer li .caseTriangle{
+            width: 0;
+            height: 0;
+            border-top: 30px solid #14916a;
+            border-left:30px solid transparent;
+            opacity: 0.5;
+            /* 定位 */
+            position: absolute;
+            top:10px;
+            left:570px;
+        }
+        #caseContainer li img{
+            width: 590px;
+            height: 400px;
+            margin:10px;
+        }
+        #caseContainer .caseMask{
+            background-color: rgba(0,0,0,0.5);
+            /* 定位实现遮罩【距上下左右距离同时有，就相当于规定了宽高。距顶部高100%，底部为0px，就相当于高度为0 */
+            position: absolute;
+            top:100%;
+            bottom:30px;
+            left:30px;
+            right: 30px;
+            /* 垂直居中对齐文本盒子 */
+            display: flex; 
+            align-items: center;
+            /* 隐藏 */
+            opacity: 0;   
+            /* 过渡 */
+            transition: 0.3s;
+        }
+        #caseContainer .caseMask p{
+            width: 27%;
+            font-size: 27px;
+            color: white;
+            line-height: 50px;
+            /* 居中 */
+            margin:0 auto;
+            text-align: center;
+            /* 应为超链接 */
+            cursor: pointer;
+        }
+        #caseContainer li:hover .caseTriangle{
+            opacity: 0;
+            transition: .3s;
+        }
+        #caseContainer li:hover .caseMask{
+            /* 鼠标悬停效果：修改top使得遮罩由下向上产生，修改透明度使得遮罩与文本显示 */
+            top:30px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 导航 -->
+        <div class="nav clear">
+            <div class="navTitle">
+                <!-- 中菜单 -->
+                <div class="navMenu">
+                    <ul>
+                        <li><a href="./Aboutus.html">了解我们</a></li>
+                        <li class="active"><a href="./Caseshare.html">案例分享</a></li>
+                        <li><a href="">精装服务</a></li>
+                        <li><a href="">优质产品</a></li>
+                        <li><a href="./News.html">公司动态</a></li>
+                        <li><a href="./Contact.html">找我们聊聊</a></li>
+                    </ul>
+                </div>
+                <!-- 左logo -->
+                <div class="navLogo">
+                    <a href="./index.html" id="navlogoa"><img src="./img/logo.png" alt="loadfailed"></a>
+                </div>
+                <!-- 右图标 -->
+                <ul class="navIcon">
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li class="wechat"><a href=""></a><div class="QRCode"><img src="./img/QRCODE.png" alt="loadfailed"></div></li>
+                </ul>
+            </div>
+            <img src="./img/caseshare-1.png" alt="loadfailed" class="navImg">
+            <div id="navContainer">
+                <div id="navAboutus">
+                    <h3>CASE</h3>
+                    <h1>案例分享</h1>
+                </div>
+            </div>
+        </div>
+        <!-- 中部内容 -->
+        <div id="caseWrap" class="wrap">
+            <div id="caseContainer">
+                <ul class="clear">
+                    <li>
+                        <div class="caseTriangle"></div>
+                        <img src="./img/caseshare-2.png" alt="loadfailed">
+                        <div class="caseMask">
+                            <p>论·美的存在</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="caseTriangle"></div>
+                        <img src="./img/caseshare-3.png" alt="loadfailed">
+                        <div class="caseMask">
+                            <p>论·美的存在</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="caseTriangle"></div>
+                        <img src="./img/caseshare-4.png" alt="loadfailed">
+                        <div class="caseMask">
+                            <p>论·美的存在</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="caseTriangle"></div>
+                        <img src="./img/caseshare-5.png" alt="loadfailed">
+                        <div class="caseMask">
+                            <p>论·美的存在</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="caseTriangle"></div>
+                        <img src="./img/caseshare-6.png" alt="loadfailed">
+                        <div class="caseMask">
+                            <p>论·美的存在</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="caseTriangle"></div>
+                        <img src="./img/caseshare-7.png" alt="loadfailed">
+                        <div class="caseMask">
+                            <p>论·美的存在</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="caseTriangle"></div>
+                        <img src="./img/caseshare-8.png" alt="loadfailed">
+                        <div class="caseMask">
+                            <p>论·美的存在</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="caseTriangle"></div>
+                        <img src="./img/caseshare-9.png" alt="loadfailed">
+                        <div class="caseMask">
+                            <p>论·美的存在</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>  
+        </div>
+        <!-- 页脚 -->
+        <div class="footer">
+            <div class="footercontainer">
+                <a href="./index.html" id="footerlogoa"><img class="footerlogo" src="./img/footerlogo.png" alt="loadfailed"></a>
+                <div class="footerTelephone">
+                    <div class="footerTelephonelogo"></div>
+                    <p><span> 028-82708866 / 13558833169</span></p>
+                </div>
+            <div class="list clear">
+                <div class="contact">
+                    <h5>联系方式</h5>
+                    <p><span></span>成都熊管家装饰装修有限公司</p>
+                    <p><span></span>地址 : 成都市温江区珠江广场写字楼15楼</p>
+                    <p><span></span>联系电话 : 028-82708866 &#40;座机&#41; &nbsp;/13558833169</p>
+                    <p><span></span>E-mail : admian@admin.com</p>
+                </div>
+                <div class="fastguid">
+                    <h5>快速导航</h5>
+                    <a href="./Aboutus.html">了解我们</a> &#47;
+                    <a href="./Caseshare.html">案例分享</a> &#47;
+                    <a href="">精装服务</a> &#47;
+                    <a href="">优质产品</a> / 
+                    <a href="./News.html">公司动态</a> /
+                    <a href="./Contact.html">联系我们</a> 
+                    <img src="./img/fastguidfont.png" alt="loadfailed">
+                </div>
+                <div class="access">
+                    <h5>快捷入口</h5>
+                    <ul class="navIcon clear">
+                        <li class="wechat"><a href=""></a><div class="QRCode"><img src="./img/QRCODE.png" alt="loadfailed"></div></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                    </ul>
+                    <p>互联网家装引领者</p>
+                </div>
+            </div>
+                <div class="footerCopyright">Copyright &copy;2015-2019&nbsp;&nbsp;成都熊管家装饰装修有限公司 版权所有</div>
+            </div>
+        </div>
+        <div id="copyrightLine" ></div>
+    </div>
+</body>
+</html>
